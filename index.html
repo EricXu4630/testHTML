@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Sample Page</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
+		
+		<script>
+			function initialize()
+			{
+                msg = document.getElementById("message_info");
+				if (data)
+				{
+					msg.innerHTML = data.msg;
+				}
+                else
+                    {
+                        msg.innerHTML = "";
+                    }
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<form method = "post" action = "welcome.html">
+			Username: <input type = "text" name = "uname" />
+			Password: <input type = "text" name = "pword" />
+			<input type = "hidden" name = "source" value = "login" />
+			<input type = "submit" />
+		</form>
+		
+		<a href = "register.html">If you are not already a member, click here to register.</a>
+        <br />
+        <div id = "message_info"></div>
+	</body>
+</html>
